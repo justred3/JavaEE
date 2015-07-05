@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel = "stylesheet" type = "text/css" href = "b.css"><link>
+ 
+  <link rel = "stylesheet" type = "text/css" href = "d.css"><link>
+   <link rel = "stylesheet" type = "text/css" href = "c.css"><link>
+  <title>样式表的冲突的解决</title>
+	<style type="text/css">
+			/*
+				 1.行级 > 内部 > 外部
+				 2.id > 类选择器 > 标签选择器
+				    外部样式表中俄id选择器 > 内部样式表的标签选择器
+
+					原则： 就近原则
+
+			*/
+		div{
+			 color:blue ;
+		}
+
+		.two{
+			border:3px dotted green ;
+			color:red ;
+		}
+		.one{
+			color:yellow ;
+		}
+
+		
+
+		#d{
+			color:green ;
+		}
+
+		p{
+			color:red ;
+		}
+	</style>
+ </head>
+ <body>
+       <div class = "one" id = "d">大家好</div>
+
+	   <P id = "p" style = "color:blue;">哈哈哈</p>
+
+	   <h1>哈哈哈</h1>
+
+	   <h2 class = "two one" >哈哈哈</h2>
+ </body>
+</html>

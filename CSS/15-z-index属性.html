@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>z-index属性</title>
+	<style type="text/css">
+		*{
+			padding:0px;
+			margin:0px;
+		}
+		div{
+			width:200px;
+			height:200px;
+		}
+		
+		#d{
+			position:absolute;
+			left:100px;
+			top:100px;
+			background-color:red ;
+			z-index:10 ;
+		}
+		#d1{
+			position:absolute;
+			left:200px;
+			top:200px;
+			background-color:green ;
+			z-index:5;
+		}
+	</style>
+ </head>
+ <body>
+	  <div id  ="d"></div>
+	  <div id = "d1"></div>
+ </body>
+</html>

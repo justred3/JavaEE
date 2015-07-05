@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+		/*
+			  2.扩展选择器：
+					a. 组合选择器: 用逗号隔开多个选择器
+					b. 关联选择器(后代选择器) : 用空格隔开,
+					c. 伪类选择器
+							1)： 静态伪类： :link,:visited,只能用于超链接
+							2):  动态伪类： 适用于各种标签
+											:onfocus 控件获得焦点
+											:active  点击控件的时候
+											:hover   当鼠标移动到某个控件上方的时候
+							a{}与a:link{}:
+							区别：a{}包括了锚点 a:link{}不包括锚点
+		*/
+		div,p,h1,.one,#two{
+			border:5px double blue ;
+		}
+		
+		h3 i   {
+			color:red ;
+		}
+
+		a:link{
+			color:red ;
+		}
+		a:visited{
+			color:yellow;
+		}
+
+		input:focus{
+			border:1px solid red ;
+			color:green ;
+			background-color:#ffcc99;
+		}
+
+		p:active{
+			color:blue;
+		}
+
+		label:hover{
+			cursor:hand;
+		}
+
+		table{
+			width:300px;
+			height:300px;
+			border:1px solid red ;
+			border-collapse:collapse;
+		}
+
+		table td{
+			border:1px solid red ;
+		}
+
+		table tr:hover{
+			background-color:#ffcc66;
+		}
+  </style>
+ </head>
+ <body>
+     <div>你好</div>
+	 <p>刘德华</p>
+	 <h1>成龙</h1>
+
+	 <h4 class = "one">林志玲</h4>
+	 <h3>北京<b>传智<i>播客</i>黑马</b>训练营</h3><br>
+	 <i>北京</i>
+	 <a href = "" name = "">搜狐</a>
+	 <input type="text" name="">
+	 <label>北京，你好</label>
+	 <table >
+	 <tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	 </tr>
+	 <tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	 </tr>
+	 <tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	 </tr>
+	 </table>
+ </body>
+</html>

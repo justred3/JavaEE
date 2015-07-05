@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>定位属性</title>
+	<style type="text/css">
+			/*
+				position:  a. 绝对定位：原点在父容器的左上角
+						   b. 相对定位：相对于自己原来的位置(左上角为原点)
+
+						   顺序流：所有的标签初始排列顺序就称为顺序流。
+						       两种情况控件脱离了顺序流： 
+									1. 当我们把控件的位置设定为绝对定位
+									2. 当我们设置控件的float属性的时候。
+			*/
+			*{
+				padding:0px;
+				margin:0px;
+			}
+		/*div{
+			position:absolute;
+			left:20px;
+			top:20px;
+			width:200px;
+			height:200px;
+			border:1px solid red ;
+		}
+
+		p{
+			position:absolute;
+			left:20px;
+			top:20px;
+		}*/
+		
+		body{
+			padding:50px;
+		}
+
+		#d{
+			position:absolute;
+			width:200px;
+			height:200px;
+			border:1px solid red ;
+		}
+
+		#d1{
+			position:relative;
+			left:50px;
+			top:-50px;
+			width:200px;
+			height:200px;
+			border:1px solid red ;
+		}
+		
+	</style>
+ </head>
+ <body>
+	  <div id = "d">
+		  <p>你好</p>
+	  </div>
+	  <div id = "d1">d1</div>
+ </body>
+</html>
