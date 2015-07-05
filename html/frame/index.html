@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>hello world~</title>
+</head>
+<!-- 框架标签与 <body>标签 互斥 (把body标签删除掉)
+	frameset : 定义一个框架
+		rows: 将框架按照行(横着分)分隔
+		cols: 将框架按照列(竖着分)分隔 
+			frame: 指定框架的页面
+				src:指定显示页面的路径
+				noresize:不能调整框架大小 
+				scrolling:是否显示滚动条yes  no auto .
+				frameborder: 是否显示边框 0(无边框) 1(有边框)
+				
+				注: 在html中,当属性的键和值完全一样时,可以忽略属性的值.
+-->
+<frameset rows="30%,70%" >
+	<frame src="top.html" noresize frameborder="0" />
+	<frameset cols="30%,*" >
+		<frame src="left.html" noresize frameborder="0" />
+		<frame src="main.html" name="abc" noresize scrolling="no" frameborder="0"  />
+	</frameset>
+</frameset>
+</html>

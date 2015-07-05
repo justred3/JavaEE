@@ -1,0 +1,118 @@
+<html>
+<head>
+<!-- 解决乱码,告诉浏览器 当前文档类型和编码 -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 
+		form表单标签: 要提交的内容,使用该标签包裹
+			action属性: 决定表单提交到哪里 			
+			method属性: 决定表单的提交方式  get(默认值)/post
+				post和get区别:
+					1.post提交(http 请求正文中) 键值对没有在地址栏上.而get是放在地址栏上的.
+					2.安全性上post更高一些.
+					3.长度上:get因为是放到地址栏中,长度受限.2k. post 理论上是无限的. 
+		input标签: 表单项标签
+			type类型:
+				text 文本框
+				password 密码框
+				radio 单选框
+				checkbox 多选框
+				file 文件上传
+				hidden 隐藏域
+				submit 提交
+				reset 重置
+				image 提交(图片,没用了)
+				button 按钮
+			name属性:
+				对于表单项: 提交时键值对的键
+			value属性:
+				1>对于需要提交的表单项: 提交时的值
+				2>按钮类型的: 按钮上显示的文字.
+			readonly属性:
+					只读属性.只是限制value属性的变化.
+					只能给: text 和 password 使用. textarea也有这个属性.
+			disabled属性:
+					禁用.颜色变灰. 不参与提交.
+					适用范围,所有input都可以使用.
+			checked属性:
+					默认被选中.
+					只适用于: 1 radio  2 checkbox
+			maxlength属性:定义最大长度.
+			size 属性: 定义输入框的显示长度.
+				以上两个属性 只能放在 text 和 password中.
+			
+			select 标签:
+					下拉选			
+				name属性: 提交的键
+				size属性: 同时显示的选项个数
+				multiple属性: 变成多选
+				selected属性: 让option默认被选中.
+			textarea 标签: 
+					文本域
+				name属性: 提交的键
+				col属性: 列 宽
+				row属性:	 行高
+				readonly属性:只读.			
+				
+			
+	
+ -->
+ <form action="#" method="get" >
+	<table border="1"   >
+		<tr>
+			<td colspan="3" align="center" ><b>用户注册</b></td>
+		</tr>
+		<tr>
+			<td>用户名:</td>
+			<td><input type="text" name="name" value="123" maxlength="5"  size="50"  /></td>
+		</tr>
+		<tr>
+			<td>密码:</td>
+			<td><input type="password" name="password"   /></td>
+		</tr>
+		<tr>
+			<td>性别:</td>
+			<td>女<input type="radio" name="sex" value="0"   />男<input type="radio" name="sex" value="1" checked="checked" /></td>
+		</tr>
+		<tr>
+			<td>愛好:</td>
+			<td>抽烟<input type="checkbox"  name="habit" value="smoke" checked="checked"  />喝酒<input type="checkbox"  name="habit" value="drink"   />烫头<input type="checkbox"  name="habit" value="tangtou"   /></td>
+		</tr>
+		<tr>
+			<td>学历:</td>
+			<td>
+				<select name="edu" size="10"  multiple="multiple" >
+					<option value="00" >---请选择学历---</option>
+					<option value="01" >高中</option>
+					<option value="02" >大专</option>
+					<option value="03" selected="selected" >大本</option>
+					<option value="04" >硕士</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>上传照片:</td>
+			<td><input type="file" name="photo" /></td>
+		</tr>
+		<tr>
+			<td>个人描述:</td>
+			<td><textarea name="desc" cols="50" rows="10"   ></textarea></td>
+		</tr>
+		<tr>
+			<td>隐藏域:</td>
+			<td><input type="hidden" name="secret" value="haha" /></td>
+		</tr>
+		<tr>
+			<td>其他:</td>
+			<td><input type="image"  /></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center" ><input type="submit" value="提交" /><input type="reset" /></td>
+		</tr>
+		
+	</table>
+ </form>
+</body>
+</html>

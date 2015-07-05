@@ -1,0 +1,50 @@
+<html>
+<head>
+<!-- 解决乱码,告诉浏览器 当前文档类型和编码 -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+	a标签: anchor锚
+		1.超链接 -> 点击之后跳转页面
+			格式: 协议名+资源 
+				 http://www.baidu.com(我们常用的) 
+				 mailto : xx@itcast.cn 发送邮件
+				 thunder:  迅雷下载
+				 QQ:
+				 旺旺:
+		2.锚 => 在当前页面中跳转例如:回到顶部 ==> 使用就是锚.
+			1>做一个锚标记,使用a标签的name属性指定锚点名称. <a name="abc" >这是顶部</a>
+			2>跳转到锚标记,使用href属性指定要跳转到的锚点.<a href="#abc" >回到顶部</a>
+			
+	a标签中的属性
+		href属性: 跳转的资源名 或 锚点名称
+		name属性: 定义锚点时,指定锚点名称.
+		target属性: 针对资源跳转时使用.
+			该属性不指定==> 在当前页面打开.
+			_blank : 在空白页打开. 
+		
+		
+	
+ -->
+ 	<a name="abc" >这是顶部</a>
+ 	<a href="http://www.baidu.com" >百度</a><br/>
+ 	<a href="06-图形标签.html" target="_blank" >06-图形标签.html</a><br/>
+ 	<a href="mailto:xxx@itcast.cn" >联系我们</a><br/>
+ 	<a href="thunder://EF16EA123123" >点击下载</a>
+ 	<img src="haha (1).jpg"  alt="这是大长腿!" title="这是大长腿~~" /><br/>
+ 	<img src="haha (2).jpg"  alt="这是大长腿!" title="这是大长腿~~" /><br/>
+ 	<img src="haha (3).jpg"  alt="这是大长腿!" title="这是大长腿~~" /><br/>
+ 	<img src="haha (4).jpg"  alt="这是大长腿!" title="这是大长腿~~" /><br/>
+ 	<img src="haha (5).jpg"  alt="这是大长腿!" title="这是大长腿~~" /><br/>
+ 	<a name="middle" ></a>
+ 	<img src="haha (6).jpg"  alt="这是大长腿!" title="这是大长腿~~" /><br/>
+ 	<img src="haha (7).jpg"  alt="这是大长腿!" title="这是大长腿~~" /><br/>
+ 	<img src="haha (8).jpg"  alt="这是大长腿!" title="这是大长腿~~" /><br/>
+ 	<img src="haha (9).jpg"  alt="这是大长腿!" title="这是大长腿~~" /><br/>
+ 	<img src="haha (10).jpg"  alt="这是大长腿!" title="这是大长腿~~" /><br/>
+ 	<a href="#abc" >回到顶部</a>
+ 	<a href="#middle" >回到中间</a>
+</body>
+</html>
