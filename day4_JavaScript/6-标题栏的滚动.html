@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>人在风暴中无奈的打转</title>
+
+</head>
+<body onload="init()">
+	<script type="text/javascript">
+	<!--
+		//示例：标题栏的滚动
+		function init() {
+			//1.拿到标题栏的文本
+			var title = document.title;
+			//alert(title) ;
+			//2.将文本字串转换为数组
+			var arr = title.split("");
+			//3.拿到数组的第一个元素，并从数组中删除
+			var first = arr.shift();
+			//4.将第一个元素添加到数组的最后
+			arr.push(first);
+			//5.将数组再组合成一个字符串
+			title = arr.join("");
+			//6.将字符串再赋值回标题栏
+			document.title = title;
+			//7.每隔1秒做一遍前6步
+			setTimeout("init()", 1000);
+
+		}
+	//-->
+	</script>
+</body>
+</html>
+

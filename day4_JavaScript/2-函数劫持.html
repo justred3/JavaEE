@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<script type="text/javascript">
+	<!--
+		//函数劫持:改变javascript的预定义的函数预定义好的功能
+		window.alert = function(x){
+			document.write(x) ;
+		}
+			alert("abc") ;
+
+		/*var a = function(){
+			alert("1") ;
+		}
+
+		a = function(){
+			alert("2") ;
+		}*/   //不是函数劫持
+	//-->
+	</script>
+ </body>
+</html>

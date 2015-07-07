@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+      <script type="text/javascript">
+      <!--
+		   /*
+			    函数的定义：
+					   1.采用关键字function来定义
+					   2.采用匿名函数的方式（采用function作为名字）
+					   3.(了解) 采用new Function()的方式
+							小括号中最后一个参数是函数体，之前所有的参数都是形参.
+					
+					   调用函数:
+							调用函数的时候是用函数名来寻找的。
+							定义函数的时候千万不要重名.
+
+		   */
+
+		   function fun(){
+				alert("大家好") ;
+		   }
+
+		 //  fun() ;
+
+		   var a = function(){
+				alert("我是匿名函数") ;
+		   }
+
+		  // a() ;
+
+		  var b = new Function("x","y","z","alert(x+y+z)") ;
+		 // b(3,4,5) ;
+
+		 //------------------------------------
+		  
+		  function fun1(){
+			  alert("我是无参的函数") ;
+		  }
+		  function fun1(x){
+			  alert("我是带x参数的函数") ;
+		  }
+		  function fun1(x,y){
+			  alert("我是带两个参数的函数") ;
+		  }
+
+
+		  fun1() ;
+      //-->
+      </script>
+ </body>
+</html>

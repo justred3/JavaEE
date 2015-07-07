@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Array对象</title>
+ </head>
+ <body>
+	<script type="text/javascript">
+	<!--
+		/*
+			数组对象的定义方式：
+					1. 采用new Array()的方式
+					2. 采用[]来定义(推荐)
+
+				javascript中数组与java中数组的差别：
+					a. Java中数组是有类型的，意味着一旦类型确定，则数组中所有的数据都是同一种类型。
+					   javascript中数组时没有类型的，意味着数组中的数据可以存放任意类型 (不推荐)
+					b. java中数组的长度一旦确定就不能再更改了
+					   javascript中数组的长度是可以变化的(扩大缩小都可以)
+					     变长的两种办法 : 1) 指定length属性的值
+										  2) 指定某个数组中元素的值
+					c. java中的数组的数据引用必须用下标引用，小标必须是整数.
+					   javascript中数组的数据引用可以用任意对象
+
+				 
+		*/
+		var arr = new Array() ;  //定义一个数组arr,初始长度为0
+		var arr1 = new Array(4) ;  //定义一个数组arr1,初始长度是4
+		/*arr1[0] = 1 ;
+		arr1[1] = 10 ;
+		alert(arr1[2]) ;   //弹出来undefined,没有初始化
+		alert(arr1[100]);  //相当于定义了一个变量arr1[100],没有赋值*/
+
+		var arr2 = new Array(1,2,3,4,5) ; //定义一个数组arr2，初始化数据是1,2,3,4,5
+		//alert(arr2[4]) ;
+
+		var arr3 = [] ;  //定义了一个数组，里面是空的
+		var arr3 = [3,2,4,5] ;  //定义了一个数组，同时初始化数据
+		
+		//----------------区别---------------------------
+		var arr4 = [1,2,"4",true,45.8,false,"abc"] ;
+		//alert(arr4[3]) ;
+
+		alert(arr4.length) ;
+		//arr4.length = 100 ;  //将数组的长度变为100
+		//alert(arr4.length) ;
+		//arr4[100] = 100 ;  //将数组的长度变为101
+		//alert(arr4.length) ;
+
+		arr4.length = 2 ;   //将数组的长度变为2，多于的数据将消失了
+		//alert(arr4[2]) ;   //弹不出原来的数据了，弹出来undefined
+
+
+        var arr5 = ["中国","美国","日本"] ;
+		arr5["中国"] = ["北京","上海","天津"] ;
+		alert(arr5["中国"][0]) ;
+
+		alert(typeof(arr5)) ;
+
+  	//-->
+	</script>
+ </body>
+</html>

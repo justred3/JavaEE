@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>array对象的方法</title>
+ </head>
+ <body>
+		<script type="text/javascript">
+		<!--
+			  /*
+				array对象的方法 :
+						1. join(): 默认情况下用逗号隔开每个数据
+						2. push(): 将元素添加到数组的末尾
+						3. reverse(): 反转顺序
+						4. shift(): 删除并返回第一个元素
+						5. sort(): 排序
+						        默认情况下先将能转换为number类型的字符串和number类型的放一起比较(转为string类型比较)
+								转换不成的作为一组进行比较
+								如果想按自己的规则进行比较，那么需要传递一个function类型的参数制定比较规则。
+			  */
+
+			/*  var arr =  ["中国","美国","日本"] ;
+			  //alert(arr.join()) ;  //默认用逗号连接
+			  alert(arr.join("")) ;   //用空字符串连接
+			  arr.push("韩国") ;
+			  alert(arr.join()) ;
+			  arr.reverse() ;
+			  alert(arr.join()) ;
+			  alert(arr.shift()) ; */
+
+			  var arr1 = [3,8,"23","34",123,"abc","ab"] ;
+			  //alert(arr1.sort()) ;
+			  alert(arr1.sort(function(a,b){    //传递一个function类型参数，制定我们的比较规则
+				if(a *1  > b*1)
+					return 1 ;
+				else
+					return -1 ;
+			  })) ;
+
+		//-->
+		</script>
+ </body>
+</html>
