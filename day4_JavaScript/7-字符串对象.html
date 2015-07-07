@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>String对象</title>
+ </head>
+	<script type="text/javascript">
+	<!--
+		  /*
+			 String对象的方法：
+					 1. substr():  截取子字符串,两个参数，第一个参数是下标，第二个参数是截取的长度
+					 2. substring(): 截取子字符串，两个参数，代表的是下标
+					
+		  */
+
+		  function fun(){
+			  //1.拿到p标签对象
+				var p = document.getElementById("p") ;
+			  //2.拿到p标签对象的主体内容
+				var txt = p.innerHTML ;   //innerHTML必须是有开始标签和结束标签的标签对象才能使用
+			  //3.改变字体内容，再赋值回去
+			  p.innerHTML = txt.big().big() ;
+		  }
+
+		  //示例：点击变变变1按钮，让p标签中的文本的颜色随机变换
+		  var arr = ["red","blue","green","yellow","#666666"] ;
+		  function fun1(){
+			 //1.拿到p标签对象
+			 var p = document.getElementById("p") ;
+			 //2.随机取得一个整数作为数组的下标
+			 var index = Math.floor(Math.random()*arr.length) ;
+			  //3. 拿到p标签对象的主体内容
+			 // var txt = p.innerHTML ;
+				var txt = p.innerText ;
+			  //3.给p标签对象的主体内容改变颜色，并赋值回去
+			  p.innerHTML = txt.fontcolor(arr[index]) ;
+			 // alert(p.innerHTML) ;
+
+			 setTimeout("fun1()",500) ;
+		  }
+
+		  function fun2(){
+			  var txt = document.getElementById("h1").innerHTML ;
+			  txt = document.getElementById("h1").innerText;
+			  alert(txt) ;
+		  }
+
+		  var s = "abcdefg" ;
+		  //alert(s.substring(2,3)) ;
+		 // alert(s.substring(300,-200)) ;
+		 alert(s.substr(2,3)) ;   //3是i长度，不是索引
+	//-->
+	</script>
+ <body>
+	 <p id = "p">大</p>
+	 <input type="button" value="变变变" onclick="fun()">
+	 <input type="button" value="变变变1" onclick="fun1()">
+
+	 <h1 id = "h1"><font>你好</font></h1>
+	 <input type="button" value="演示innerHTML和innerText的区别" onclick="fun2()">
+ </body>
+</html>
