@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>window对象的opener,parent属性</title>
+ </head>
+	<script type="text/javascript">
+	<!--
+		  /*
+			  window对象的属性:  1. opener: 代表的是父窗口.window
+										应用opener，必须要求两个窗口有父子关系
+										1.超链接(设置target属性为_blank)
+										2.window.open()打开的窗口
+							     2. parent: 代表的是父窗口.window
+								        使用地方：1. 框架中
+		    									  2. 内嵌框架
+							     3. frames[]: 拿到子窗口
+		  */
+
+		  function fun(){
+			 self.open("sub.html") ;
+		  }
+	//-->
+	</script>
+ <body>
+      <input type="text" name="" id = "txt"> 
+	  <input type="button" value="打开sub.html页面" onclick="fun()">
+
+	  <a href = "sub.html" target = "_blank">打开sub.html页面</a>
+ </body>
+</html>

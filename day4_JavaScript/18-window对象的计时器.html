@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>window对象的计时器</title>
+ </head>
+	<script type="text/javascript">
+	<!--
+		/*
+			window对象的计时器：1.setTimeout(): 隔一段时间调用某个函数(只调用一次),返回的是一个计时器(理解成一个手表)
+								  clearTimeout() ：销毁由setTimeout()产生的计时器
+								2.setInterval(): 每隔一段时间调用某个函数(多次调用)
+								  clearInterval(): 销毁由setInterval()产生的计时器
+		*/
+		 var t ; 
+		 var t1 ;
+		function fun(){
+			//拿到p标签的主体内容
+			var p= document.getElementById("p") ;
+			var v = p.innerHTML ;
+			//将主体内类转换为number,转换后赋值回去
+			p.innerHTML = v*1-1 ;
+			t = setTimeout("fun()",1000) ;
+		}
+
+		function fun1(){
+			//拿到p标签的主体内容
+			var p= document.getElementById("p") ;
+			var v = p.innerHTML ;
+			//将主体内类转换为number,转换后赋值回去
+			p.innerHTML = v*1-1 ;
+			
+		}
+
+		function fun2(){
+			clearTimeout(t) ;
+		}
+		
+		t1 = setInterval("fun1()",1000);
+
+		function fun3(){
+			clearInterval(t1) ;
+		}
+
+		function fun4(){
+			t1 = setInterval("fun1()",1000);
+		}
+	//-->
+	</script>
+ <body>
+	  <p id = "p">10</p><br>
+	  <input type="button" value="演示setTimeout方法" onclick="fun()">
+	  <input type="button" value="演示clearTimeout方法" onclick="fun2()">
+	  <input type="button" value="演示setInterval方法" onclick="fun4()">
+	  <input type="button" value="演示clearInterval方法" onclick="fun3()">
+
+ </body>
+</html>

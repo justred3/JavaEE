@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>鼠标的移动事件</title>
+  <style type="text/css">
+	  div{
+		 width:300px;
+		 height:300px;
+		 border:1px solid red ;
+	  }
+  </style>
+ </head>
+	<script type="text/javascript">
+	<!--
+		 //示例：当鼠标在div上移动的时候显示鼠标的坐标
+		function fun(e){
+			var x = e.clientX;
+			var y = e.clientY ;
+			
+			//显示在文本框中
+			var txt = document.getElementById("txt") ;
+			txt.value = x + " :" + y ;
+		}
+	//-->
+	</script>
+ <body>
+	  <input type="text" name="" id = "txt">
+      <div onmousemove = "fun(event)"></div>
+ </body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>window对象的parent属性</title>
+ </head>
+	<script type="text/javascript">
+	<!--
+		function fun(){
+			//1.拿到文本框中填写的数据
+			   var v = document.getElementById("txt").value ;
+			//2.拿到子窗口对象
+			   var w = window.frames[0];
+			//3.拿到子窗口中的文本框对象
+			   var txt = w.document.getElementById("txt") ;
+			//4.将内容赋值给父窗口中的文本框对象的value属性
+				txt.value = v ;
+		}
+	//-->
+	</script>
+ <body>
+	  姓名：<input type="text" name="" id = "txt"><input type="button" value="传递数据到子窗口中" onclick="fun()">
+	  <iframe src = "sub1.html"></iframe>
+ </body>
+</html>

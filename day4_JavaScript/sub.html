@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+	<script type="text/javascript">
+	<!--
+		//示例： 将子窗口中的文本框中的数据传递到父窗口中的文本框中显示
+		function fun(){
+			//1.拿到文本框中填写的数据
+			   var v = document.getElementById("txt").value ;
+			//2.拿到父窗口对象
+			   var w = window.opener ;
+			//3.拿到父窗口中的文本框对象
+			   var txt = w.document.getElementById("txt") ;
+			//4.将内容赋值给父窗口中的文本框对象的value属性
+				txt.value = v ;
+		}
+	//-->
+	</script>
+ <body>
+     <input type="text" name="" id = "txt">
+	 <input type="button" value="传递子窗口的值到父窗口中的文本框" onclick="fun()">
+ </body>
+</html>

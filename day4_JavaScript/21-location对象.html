@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>location对象</title>
+ </head>
+	<script type="text/javascript">
+	<!--
+		/*
+					掌握：1 href属性
+						  2. reload()方法：重新加载本页面
+		*/
+		function fun(){
+			//window.location.href = "history对象/b.html" ;
+			window.location = "history对象/b.html" ;
+		}
+
+		function fun1(){
+			window.location.reload();
+		}
+	//-->
+	</script>
+ <body>
+		<input type="button" value="直接去b.html" onclick="fun()">
+		<input type="button" value="重新加载本页面" onclick="fun1()">
+ </body>
+</html>

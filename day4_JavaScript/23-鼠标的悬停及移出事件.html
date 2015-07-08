@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>鼠标的悬停及移出事件</title>
+	<style type="text/css">
+		.one{
+			color:red ;
+			border:6px solid green ;
+			cursor:hand;
+		}
+	</style>
+ </head>
+	<script type="text/javascript">
+	<!--
+		function fun(){
+			//拿到p标签对象
+			var p = document.getElementById("p") ;
+			//定义p的样式
+			//p.style.color = "red" ;
+			//p.style.border = "5px dashed green" ;
+			p.style.backgroundColor = "red" ;
+			p.className = "one" ;
+		}
+
+		function fun1(){
+			//拿到p标签对象
+			var p = document.getElementById("p") ;
+			
+			p.className = "" ;
+		}
+	//-->
+	</script>
+ <body>
+    <p onmouseover = "fun()" onmouseout= "fun1()" id = "p">你好</p>
+ </body>
+</html>

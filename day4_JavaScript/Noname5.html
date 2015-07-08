@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>onload事件</title>
+	<style type="text/css">
+		#d{
+			position:relative;
+			top:-30px;
+			
+		}
+		label{
+			margin-left:10px;
+		}
+	</style>
+ </head>
+	<script type="text/javascript">
+	<!--
+		 var n = 0 ;
+		 function init(){
+			n ++ ;
+			if(n ==7)
+			  n = 1 ;
+
+			//拿到图片对象
+			var img = document.getElementById("img") ;
+			//改变图片
+			img.src = "images/photo_0" + n + ".jpg" ;
+			//每隔1秒变换一下
+			setTimeout("init()",1000) ;
+		 }
+	//-->
+	</script>
+ <body onload = "init()">
+	 <center>
+      <img src = "images/photo_01.jpg" width = "200" height = "200" id = "img"><br>
+	  <div id  ="d">
+	  <label onmouseover ="fun(1)">1<label>
+	  <label>2<label>
+	  <label>3<label>
+	  <label>4<label>
+	  <label>5<label>
+	  <label>6<label>
+	  </div>
+	  </center>
+ </body>
+</html>
