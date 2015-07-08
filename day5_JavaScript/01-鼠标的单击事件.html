@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>鼠标的单击事件</title>
+ </head>
+	<script type="text/javascript">
+	<!--
+		//示例：点击按钮让图片消失
+		function init(){
+			//拿到按钮对象
+			var btn = document.getElementById("btn") ;
+			var btn1 = document.getElementById("btn1") ;
+			//注册事件
+			btn.onclick = function(){
+				//拿到图片对象
+				var img = document.getElementById("img") ;
+				img.style.display = "none" ;
+				this.disabled = "true" ;
+			}
+			btn1.onclick = function(){
+				//拿到图片对象
+				var img = document.getElementById("img") ;
+				img.style.display = "block" ;
+				//删除属性
+				var btn = document.getElementById("btn") ;
+				btn.removeAttribute("disabled") ;
+			}
+		}
+
+		function fun2(obj){
+			obj.value = "新浪" ;
+		}
+
+		function fun3(){
+			var p = document.getElementById("p") ;
+			p.innerHTML = "<img src = 'images/1.jpg' width = '200' height = '200'>" ;
+		}
+
+		function fun4(){
+			var btn2 = document.getElementById("btn2") ;
+			btn2.removeAttribute("onclick") ;
+		}
+	//-->
+	</script>
+ <body onload = "init()">
+	<img src = "images/2.gif" id = "img">
+	<input type="button" value="图片不见了"  id = "btn">
+	<input type="button" value="显示图片"  id = "btn1">
+	<input type="button" value="搜狐"  id = "btn2" onclick = "fun2(this)">
+	<input type="button" value="添加一副图片"  id = "btn2" onclick = "fun3()">
+	<input type="button" value="去掉搜狐按钮的单击事件"  id = "btn2" onclick = "fun4()">
+	<p id = "p"></p>
+ </body>
+</html>
