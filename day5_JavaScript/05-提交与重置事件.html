@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>提交与重置事件</title>
+ </head>
+	<script type="text/javascript">
+	<!--
+		function check(form){
+		//拿到文本框中的内容
+		var txt = form.username.value;
+		//判断内容
+		if(txt==""){
+			document.getElementById("sname").innerHTML="<font color = red>*  姓名必须填写</font>";
+			form.username.focus();
+			return false;
+		}
+			return true;
+	    }
+		function fun(form){
+			alert("重置事件");
+			return true;
+		}
+	//-->
+	</script>
+ <body>
+	<form method="post" action="01-鼠标的单击事件.html" onsubmit = "return check(this)" onreset = "return fun(this)">
+	姓名<input type="text" name="username"><span id="sname"></span><br>
+	<input type="submit" value="提交">
+	<input type="reset" value="重置">
+	
+	</form>
+ </body>
+</html>

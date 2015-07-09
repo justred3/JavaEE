@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+    <style type="text/css">
+		#d{
+			position:relative;
+			top:-30px;
+		}
+
+		label{
+			margin-left:15px;
+		}
+
+		.one{
+			width:10px;
+			height:10px;
+			border:1px solid black ;
+			background-color: red ;
+		}
+    </style>
+ </head>
+	<script type="text/javascript">
+	<!--
+		var n = 0 ;
+		var t = 0 ;
+		var flag = true ;
+		function init(){
+			
+			//拿到所有的label控件
+			var lbls = document.getElementsByTagName("label") ;
+			//给每个label控件注册事件
+			for(var i= 0 ;i<lbls.length;i++){
+				lbls[i].onmouseover = function(){
+					//让时间停下来
+					clearTimeout(t) ;
+					//让图片显示为相应的图片
+					var b = this.innerText * 1 ;
+					//拿到img对象
+					var img = document.getElementById("img") ;
+					img.src = "images/photo_0" + b + ".jpg" ;
+					
+					//清空所有label控件的样式
+					clearStyle() ;
+
+					//让label的样式变成one的样式
+					this.className = "one" ;
+				}
+
+				lbls[i].onmouseout =function(){
+					//alert(flag) ;
+					//隔1秒调用fun()
+					
+					
+						t = setTimeout("fun()",1000) ;						
+
+					
+					//改变当前n的值
+					n = this.innerText*1 ;
+
+					//将flag变量的值设为FALSE
+			
+				}
+			}
+
+			fun() ;
+		}
+
+		function fun(){
+			n ++;
+			if(n == 7)
+				n =1 ;
+			
+			//拿到图片对象
+			var img = document.getElementById("img") ;
+			img.src = "images/photo_0" + n + ".jpg" ;
+			
+			clearStyle() ;
+
+			//设定相应的label控件的样式
+			document.getElementById("i" + n).className = "one" ;
+			t = setTimeout("fun()",1000) ;
+		}
+
+		function clearStyle(){
+			//清空所有label控件的样式
+			//拿到所有的label控件
+			var lbls = document.getElementsByTagName("label") ;
+			for(var i = 0 ; i <lbls.length ;i++){
+				lbls[i].className = "" ;
+			}
+		}
+	//-->
+	</script>
+ <body onload = "init()">
+	 <div align = "center">
+		<img src = "images/photo_01.jpg" width = "300" height = "300" id = "img">
+		<div id = "d">
+			<label id = "i1">&nbsp;1&nbsp;</label>
+			<label id = "i2">&nbsp;2&nbsp;</label>
+			<label id = "i3">&nbsp;3&nbsp;</label>
+			<label id = "i4">&nbsp;4&nbsp;</label>
+			<label id = "i5">&nbsp;5&nbsp;</label>
+			<label id = "i6">&nbsp;6&nbsp;</label>
+		</div>
+	 </div>
+	 
+ </body>
+</html>
