@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>移动下拉框选项(单项)</title>
+</head>
+	
+<body>
+	<table align="center">
+		<tr>
+			<td>
+				<select size="10" id="left">
+					<option>选项1</option>
+					<option>选项2</option>
+					<option>选项3</option>
+					<option>选项4</option>
+					<option>选项5</option>
+					<option>选项6</option>
+					<option>选项7</option>
+					<option>选项8</option>
+
+				</select>
+			</td>
+			<td>
+				<input type="button" value="--->" onclick="removeLeft()"/><br/>
+				<input type="button" value="===>" onclick="removeLeftAll()"/><br/>
+				<input type="button" value="<---" onclick=""/><br/>
+				<input type="button" value="<===" onclick=""/><br/>
+			</td>
+			<td>
+				<select size="10" id="right">
+
+					<option>选项9</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+</body>
+	<script type="text/javascript">
+	<!--
+		function removeLeft(){
+		//拿到左边下拉框的对象
+		var leftSel = document.getElementById("left");
+		//拿到右边下拉框的对象
+		var rightSel = document.getElementById("right");
+		//拿到左边的option
+		var op = leftSel.options[leftSel.selectedIndex];
+		//将选项添加到右边
+		rightSel.appendChild(op);
+	}
+		function removeLeftAll(){
+		//拿到左边下拉框的对象
+		var leftSel = document.getElementById("left") ;
+		//拿到右边的下拉框对象
+		var rightSel = document.getElementById("right") ;
+		
+		//循环添加	
+		var length = leftSel.options.length ;
+		for(var i =0 ;i < length ;i++){
+			rightSel.appendChild(leftSel.options[0]);
+		}	
+		}
+	//-->
+	</script>
+</body>
+</html>

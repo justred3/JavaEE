@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>全选问题</title>
+</head>
+
+<body>
+	<h1>请选择你的爱好：</h1>
+	全选/全不选
+	<input type="checkbox" name="hobbys" onclick="checkAll(this.checked)" />
+	<br />
+	<input type="checkbox" name="hobby" value="football" />足球
+	<input type="checkbox" name="hobby" value="basketball" />篮球
+	<input type="checkbox" name="hobby" value="swim" />游泳
+	<input type="checkbox" name="hobby" value="singing" />唱歌
+	<br />
+
+	<input type="button" value="全选" onclick="checkAll(true)" />
+	<input type="button" value="全不选" onclick="checkAll(false)" />
+	<input type="button" value="反选" onclick="reverseCheck()" />
+</body>
+	<script type="text/javascript">
+	<!--
+		function checkAll(flag){
+		//拿到所有的多选框
+		var hobbys = document.getElementsByName("hobby");
+		//循环赋值
+		for(var i = 0;i<hobbys.length;i++){
+			hobbys[i].checked=flag;
+		}
+	}
+		function reverseCheck(){
+			//拿到所有的多选框
+			var hobbys = document.getElementsByName("hobby");
+			//循环赋值
+			for(var i =0; i<hobbys.length;i++){
+				hobbys[i].checked=!hobbys[i].checked;
+			}
+		}
+	//-->
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>替换节点的操作</title>
+</head>
+
+<body>
+	<ul >
+		<li id="bj" onclick="changeNode()">北京</li>
+		<li>湖南</li>
+		<li>山东</li>
+	</ul>
+	<ul>
+		<li  id="game">打<p>灰机</p></li>
+		<li>抓泥鳅</li>
+		<li>斗地主</li>
+	</ul>
+
+	<script type="text/javascript">
+	<!--
+		function changeNode(){
+		//拿到北京节点
+		var bjNode = document.getElementById("bj");
+		//拿到打灰机对象
+		var gameNode = document.getElementById("game");
+		//克隆一份打飞机
+		var node = gameNode.cloneNode(true);
+		//替换
+		bjNode.parentNode.replaceChild(node,bjNode);
+	}
+	//-->
+	</script>
+</body>
+</html>

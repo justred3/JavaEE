@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>获取标签节点对象的方法</title>
+</head>
+	
+<body>
+	<p name="p">你好</p>
+	<input type="text" name="username"><br>
+	<input type="text" name="username"><br>
+	<input type="text" name="username"><br>
+	<script type="text/javascript">
+	<!--
+	 //采用document.getElementById()
+	   //第二种方法
+	   //document.getElementsByName: 只能用于表单对象
+	  /* var p = document.getElementsByName("p") ;
+	   //alert(p.length) ;  //拿不到
+		var inputs = document.getElementsByName("username") ;
+		//alert(inputs.length) ;
+		inputs[1].value = "你好" ;*/
+
+		//第三种方式
+		var ps = document.getElementsByTagName("p") ;
+		//alert(ps.length) ;
+		alert(ps[0].firstChild.nodeValue) ;		
+	//-->
+	</script>
+</body>
+</html>

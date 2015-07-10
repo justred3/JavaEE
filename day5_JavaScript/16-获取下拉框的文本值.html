@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>获取下拉框的文本的值</title>
+</head>
+
+<body>
+	<select name="edu" id="edu">
+	<option value="本科">本科</option>
+	<option value="专科">专科</option>
+	<option value="高中">高中</option>
+	<option value="小学">小学</option>
+	<option value="幼儿园">幼儿园</option>
+	</select>
+
+	<script type="text/javascript">
+	<!--
+		//获取所有option对象
+		var ops = document.getElementsByTagName("option");
+		for(var i = 0; i<ops.length; i++){
+			alert(ops[i].innerHTML);
+		}
+	//-->
+	</script>
+</body>
+</html>

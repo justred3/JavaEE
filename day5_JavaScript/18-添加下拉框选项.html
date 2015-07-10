@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>添加下拉框选项</title>
+</head>
+
+<body>
+	<input type="button" value="添加选项" onclick="addOptions()"/>
+	<input type="button" value="添加一副图片" onclick="fun()">
+	<select>
+		<option>本科</option>
+		<option>专科</option>
+		<option>高中</option>
+		<option>初中</option>
+	</select>
+	<div id = "d"></div>
+
+	<script type="text/javascript">
+	<!--
+		function addOptions(){
+		//创建一个新的节点
+		//第一种方式
+		/*var option = document.createElement("option") ;
+		option.value = "小学" ;
+		option.text = "小学" ;
+
+		//拿到下拉框，加入小学
+		document.getElementsByTagName("select")[0].options.add(option) ;*/
+		
+		//第二种方式
+		//获得select对象
+		//var select = document.getElementsByTagName("select")[0] ;
+
+		//select.innerHTML = select.innerHTML + "<option value = '小学'>小学</option>" ;
+
+		//第三种
+		var option = document.createElement("option");
+		option.value="小学";
+		option.text="小学";
+		//获取select对象
+		var select = document.getElementsByTagName("select")[0];
+		select.appendChild(option); 
+		}
+		function fun(){
+		//拿到div对象
+		var d = document.getElementById("d");
+		//创建一个img对象
+		var img = document.createElement("img");
+		img.src="images/1.jpg";
+		img.style.width="300px";
+		img.height="300";
+		
+		//将图片添加到div标签中
+		d.appendChild(img);
+		}
+	//-->
+	</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>标签节点的属性示例</title>
+</head>
+
+<body>
+	<ul>
+		<li id="bj" value="beijing">
+			北京
+			<h1>海淀</h1>
+			奥运
+		</li>
+		<li id="sh" value="shanghai">
+			上海
+		</li>
+		<br/>
+		<input type="button" value="li取值" onclick="getLi()" />
+	</ul>
+
+	<script type="text/javascript">
+	<!--
+		function getLi(){
+		//拿到北京节点
+		var li = document.getElementById("bj");
+		//拿到北京节点的所有儿子
+		var childs = li.childNodes;
+		for(var i=0; i <childs.length;i++){
+			//alert(childs[i].nodeValue+childs[i].nodeName);
+			if(childs[i].nodeType==1){
+				alert(childs[i].firstChild.nodeValue);
+			}else{
+				alert(childs[i].nodeValue);		
+			}
+		}
+		}
+	//-->
+	</script>
+</body>
+</html>

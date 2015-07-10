@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>添加表格行</title>
+</head>
+
+<body>
+	<table width = 600 height = 100 align = center>
+      <tr>
+		<td>姓名:</td>
+		<td><input type="text" name="" id = "name"></td>
+		<td>邮箱:</td>
+		<td><input type="text" name="" id = "email"></td>
+		<td>年龄</td>
+		<td><input type="text" name="" id = "age"></td>
+      </tr>
+      <tr>
+		<td align = "center" colspan = "6"> <input type="button" value="添加" onclick="addtr()"></td>		
+      </tr>
+      </table>
+	  <br>
+	  <br>
+	  <br>
+	  <br>
+	  <hr>
+	  <table width = "500" border =1 align = center>
+		  <tr>
+			<td>姓名</td>
+			<td>邮箱</td>
+			<td>年龄</td>
+			<td>操作</td>
+		  </tr>
+
+	<script type="text/javascript">
+	<!--
+		function addtr(){
+		//拿到填写的信息
+		var name = document.getElementById("name").value;
+		var email = document.getElementById("email").value;
+		var age = document.getElementById("age").value;
+		
+		//创建一个行以及4个单元格
+		var tr = document.createElement("tr");
+		
+		//创建4个单元格，并赋值
+		var nameTd = document.createElement("td");
+		nameTd.innerHTML = name;
+		var emailTd = document.createElement("td");
+		emailTd.innerHTML = email;
+		var ageTd = document.createElement("td");
+		ageTd.innerHTML = age;
+		var btnTd = document.createElement("td");
+		btnTd.innerHTML = "<button onclick = 'delTr(this)'>删除</button>" ;
+		
+		//组合各个单元格
+		tr.appendChild(nameTd);
+		tr.appendChild(emailTd);
+		tr.appendChild(ageTd);
+		tr.appendChild(btnTd);
+		
+		//拿到第二个表格对象
+		var table = document.getElementsByTagName("table")[1];
+		//添加到tbody中
+		table.firstChild.appendChild(tr);
+		}
+		function delTr(btn){
+			//删除行
+			//采用removeChild()
+			//父亲(tbody)干掉儿子(tr)
+			//拿到曾爷爷
+			var tbody = btn.parentNode.parentNode.parentNode;
+			//拿到爷爷
+			var tr = btn.parentNode.parentNode;
+			//曾爷爷干掉爷爷
+			tbody.removeChild(tr);
+		}
+	//-->
+	</script>
+</body>
+</html>

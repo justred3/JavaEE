@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>节点导航</title>
+</head>
+	
+<body>
+	<table>
+		<tr>
+			<td>刘德华</td>
+			<td>男</td>
+			<td>50</td>
+		</tr>
+		<tr>
+			<td>成龙</td>
+			<td>男</td>
+			<td>60</td>
+		</tr>
+		<tr>
+			<td>李丽珍</td>
+			<td>女</td>
+			<td>45</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+	<!--
+		//拿成龙的年龄
+			//拿到根节点
+		var root = document.documentElement ;
+		//alert(root.nodeName) ;
+		//拿到body节点
+		var body = root.lastChild ;
+		//alert(body.nodeName) ;
+		//拿到table节点
+		var table = body.firstChild ;
+		//拿到tbody节点
+		var tbody = table.firstChild ;
+		//拿到成龙的年龄
+		var age = tbody.firstChild.nextSibling.lastChild.firstChild.nodeValue ;
+		alert(age);
+	//-->
+	</script>
+</body>
+</html>

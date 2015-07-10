@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>属性节点的操作</title>
+</head>
+	
+<body>
+	<input type="text" name="name" id="txt">
+	<script type="text/javascript">
+	<!--
+		//拿到文本框对象
+		var txt = document.getElementById("txt");
+		//拿到属性节点
+		var atts = txt.attributes;
+		//拿到name属性
+		for(var i = 0; i < atts.length;i++){
+			alert(atts[i].nodeName+":"+atts[i].nodeValue);
+		}
+	//-->
+	</script>
+</body>
+</html>
