@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<itcast:书架 xmlns:itcast="http://www.itcast.cn"
+	 xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://www.itcast.cn book.xsd">
+<itcast:书>
+<itcast:书名>老会计</itcast:书名>
+<itcast:作者>绿壳蛋鸡</itcast:作者>
+<itcast:售价>路口</itcast:售价>
+</itcast:书>
+
+</itcast:书架>

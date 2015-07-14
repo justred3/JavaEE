@@ -23,6 +23,14 @@ public class StudentUI {
 		}else if("c".equalsIgnoreCase(op)){
 			findStudentByExamId();
 		}else if("d".equalsIgnoreCase(op)){
+			try{
+				System.out.println("正在退出........");
+				Thread.sleep(1000);
+			}catch(Exception e){
+				e.printStackTrace();
+			}finally{
+				System.out.println("欢迎下次登陆！");
+			}
 			return;
 		}else{
 			System.out.println("输入错误，请重新输入：");

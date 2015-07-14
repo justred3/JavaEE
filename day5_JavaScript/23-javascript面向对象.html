@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>下拉框选项的移动(多项)</title>
+</head>
+	
+<body>
+ <body>
+	 <p id = "p" onclick = "fun()">你好</p>
+	<script type="text/javascript">
+	<!--
+		function Person(){
+		var name = "张飞";   //是私有属性
+		this.age = 18;      //定义公有属性
+	}
+	
+		var p = new Person();
+		p.weigth = "180";    //私有属性，只有p对象有
+		//alert(p.name) ; //弹不出来
+		//alert(p.age);
+
+		var p1 = new Person() ;
+		//alert(p1.age) ;
+		//alert(p1.weight);   //私有属性
+		
+		
+		function fun(){
+		//拿到P标签对象
+		var p = document.getElementById("p");
+		
+		//随便定义P的属性
+		p.name = "哈哈";
+		
+		p.innerHTML=p.name;
+	}
+	//-->
+	</script>
+</body>
+</html>
