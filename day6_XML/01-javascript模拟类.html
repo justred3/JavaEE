@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+     <script type="text/javascript">
+     <!--
+		 /*
+			1.定义类并创建类的实例对象
+			2.定义公有属性和私有属性
+			3.定义公有方法和私有方法
+			4.静态属性和静态方法
+			5.构造函数（无参，有参）
+			6.原型方式声明属性与方法
+			7.直接用Object或函数对象加属性与方法
+		 */
+
+		 //--------------1.定义类并创建类的实例对象---------------------------------------------
+		 /*function Person(){
+			
+		 }
+
+		 var p = new Person() ;*/
+
+		 //--------------2.定义公有属性和私有属性----------------------------------
+		 /*
+			   定义私有属性：
+					   1.在函数中： 用var 定义
+					   2.在函数外： 用对象.属性名定义
+			   定义公有属性:
+					   1.在函数中： 用this.属性名定义
+					   2.在函数外： 函数名.prototype.属性名 = 默认值;定义
+		 */
+		 /*function Person(){
+			var name = "张三" ;
+			this.age = 100 ;  //定义公有属性
+		 }
+		 Person.prototype.height = 190 ;  //定义了一个公有属性
+		 var p = new Person() ;
+		 p.weight = 180 ;
+		 alert(p.weight) ;
+		 alert(p.age) ;   //弹出来100
+		 alert(p.height) ;  //弹出来190
+
+		 var p1 = new Person() ;
+		 //alert(p1.weight) ;   //弹不出来，因为weight属性是私有的
+		 alert(p1.age) ;   //弹出来100
+		 alert(p1.height) ;   //弹出来190  */
+
+		 //---------------------3.定义公有方法和私有方法----------------------------------
+		 /*
+			  定义私有方法:
+					  1.在函数中：采用 var 方法名= function(){} 定义
+					  2.在函数外：采用 对象名.方法名=function(){} 定义
+			  定义公有方法：
+					   1.在函数中：采用 this.方法名= function(){} 定义
+					   2.在函数外：采用 函数名.prototype.方法名=function(){} 定义
+		 */
+
+		/* function Person(){
+			 var show = function(){
+				alert("我是私有方法") ;
+			 }
+			 this.display = function(){
+				show() ;
+			 }
+		 }
+
+		var p= new Person();
+		 //p.show() ;  //调用不来，因为是私有的
+		 p.display() ;
+
+		 p.eat = function(){
+			alert("我要吃鸡肉") ;
+		 }
+		 
+		 Person.prototype.sing = function(){
+			alert("我喜欢唱忘情水")  ;
+		 }
+		
+		 p.eat() ;   //私有方法
+		 p.sing() ;
+
+		 var p1 = new Person() ;
+//		 p1.eat() ;  //弹不出来，因为eat方法是私有的，只属于p对象
+		 p1.sing() ;  */
+
+		 //----------------静态属性和静态方法--------------------------------------
+		 /*
+			注意： 定义静态属性和方法都用函数名来定义。
+				   调用的时候只能用函数名来调用，不能用对象调用。
+		 */
+
+		/* function Person(){
+			
+		 }
+		 Person.name = "张三" ;
+		 Person.show = function(){
+			alert("我是静态方法") ;
+		 }
+
+		 alert(Person.name) ;
+		 Person.show() ;
+		 var p = new Person() ;
+		 alert(p.name) ;   //弹不出来，因为name是静态的
+		 p.show() ;     //出错，因为show方法是静态的，要用函数名调用 */
+
+		 //----------------5.构造函数（无参，有参）----------------------------------------
+		 /*
+			注意： 函数名不要重复，因为先定义的函数永远调用不了
+		 */
+
+		 //----------------7. 如何创建javascript对象---------------------------------------
+		 /*
+			 创建javascript对象的三种方式：
+						 1. 采用 new 函数名() ;
+						 2. 采用 new Object() ;
+						 3. 采用 json格式定义
+		 */
+		  function Person(){}
+		  var p = new Person() ;
+
+		  var obj = new Object() ;
+		  obj.name = "李四" ;
+		  // alert(typeof(obj)) ;
+		  //alert(obj.name) ;
+
+		  var json = {"a":"中国","b":"美国","c":"日本"} ;   //定义了一个json对象
+		  var json1 = {1:"中国",2:"美国",3:"日本"} ;   //定义了一个json对象
+		  //alert(typeof(json)) ;
+		  //alert(json.a) ;  //拿到中国字符串
+		  //alert(json["b"]) ;  //拿到美国字符串
+
+		  //alert(json1["2"]) ;  //拿到美国字符串,注意不要用json1."2"此种写法
+
+		  //如果想拿到所有的值，需要用foreach循环
+		 /* for(var i in json){
+			alert(i + " :" + json[i]) ;   //打印所有的值，写法不能用json.i
+		  }*/
+	
+	      //------------------扩展已有对象的方法--------------------------
+		  /*Array.prototype.getMax = function(){   //扩展数组的方法，提供一个获得最大值的方法
+			var max = this[0] ;
+			for(var i = 1 ; i < this.length ;i ++){
+				if(this[i] > max)
+					max = this[i] ;
+			}
+			return max ;
+		  }
+		  
+		  var arr = [3,6,4,34,26] ;
+
+		  alert(arr.getMax()) ;*/
+
+		  //-----------------继承--------------------------
+		 /* function Person(){
+			  var name = "张三" ;
+			  this.age = 100 ;
+			  var show = function(){
+				alert("我是私有方法") ;
+			  }
+			  this.display = function(){
+				show() ;
+			  }
+		  }
+
+		  function Student(){
+			 this.display = function(){
+				alert("大家好") ;
+			 }
+		  } 
+		  //希望student函数继承于Person函数
+		  Student.prototype = new Person() ;
+		  var s = new Student() ;
+		  //alert(s.name) ;  //弹不出来，因为name是私有的，继承不下来
+		  alert(s.age) ;
+		  //s.show() ;  //报错，因为show方法是私有的，继承不下来
+		  s.display() ;*/
+
+		  //------------重载重写----------------------------
+		  /*
+			  重载没有意义，重写意义不大。
+		  */
+		
+		  //------------------arguments对象-----------------------------
+		  /*
+			  arguments对象： 代表了一个参数对象
+		  */
+
+		  function $(id){   //包装了一下获取对象的功能
+ 			  if(arguments.length > 1){
+				alert("你传递的参数不得大于1个") ;
+				return ;
+			  }
+			  var p = document.getElementById(id) ;
+			  if(p == null){
+				alert("抱歉，你传递的id的值不对") ;
+				return ; 
+			  }
+			  return p ;
+		  }
+
+		  function fun(){
+			  //var p = $("p",1,2,3) ;  //弹出来  "你传递的参数不得大于1个"
+
+			  var p = $("p1") ;   //弹出来  "抱歉，你传递的id的值不对"
+			  
+			  alert(p.innerHTML) ;
+
+
+		  }
+
+		  //--------------with--------------------------
+		  /*
+			  with的作用就是做一个简化写法
+		  */
+		  function fun1(){
+			  var p = $("p") ;
+
+			  //p.style.border = "1px solid red " ;
+			  //p.style.color = "green" ;
+			  with(p){
+				 style.border = "1px solid red " ;
+				 style.color = "green" ;
+				 style.cursor = "hand" ;
+			  }
+		  }
+
+		  //--------------foreach循环---------------------------
+		  /*
+			  foreach循环是对对象的属性进行循环
+		  */
+		  function fun2(){
+			 var p = $("p") ;
+
+			 for(var a in p){
+				alert(a) ;
+			 }
+		  }
+     //-->
+     </script>
+
+	 <p id = "p" name = "p1" >大家好</p>
+	 <input type="button" value="拿到p标签对象" onclick="fun()">
+	 <input type="button" value="给p标签加样式" onclick="fun1()">
+	 <input type="button" value="演示foreach循环" onclick="fun2()">
+ </body>
+</html>
